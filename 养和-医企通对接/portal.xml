@@ -1,0 +1,68 @@
+<Context path="/portal"  docBase="d:/project/openjweb/webapps" workDir="/temp" debug="1" reloadable="true" crossContext="true" >
+
+  <Resource name="jdbc/mysql" auth="Container" type="javax.sql.DataSource" 
+              driverClassName="com.mysql.jdbc.Driver" 
+              url="jdbc:mysql://localhost:3333/erp?useUnicode=true&amp;characterEncoding=UTF-8" 
+              username="root" password="mysql" schema="erp" maxActive="200" maxIdle="20" maxWait="10000"/> 
+    <resource-ref>
+        <descrtiption>jdbc/mysql</descrtiption>
+        <res-ref-name>jdbc/mysql</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+
+	<Resource name="jdbc/mysqlyctzk" auth="Container" type="javax.sql.DataSource" 
+              driverClassName="com.mysql.jdbc.Driver" 
+              url="jdbc:mysql://120.77.147.179:3306/zht?useUnicode=true&amp;characterEncoding=UTF-8" 
+              username="shop_user" password="shopzzjkz321" schema="zht" maxActive="200" maxIdle="20" maxWait="10000"/> 
+    <resource-ref>
+        <descrtiption>jdbc/mysqlyctzk</descrtiption>
+        <res-ref-name>jdbc/mysqlyctzk</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+
+	<Resource name="jdbc/mysqlyctfk" auth="Container" type="javax.sql.DataSource" 
+              driverClassName="com.mysql.jdbc.Driver" 
+              url="jdbc:mysql://120.77.147.179:3306/nbank?useUnicode=true&amp;characterEncoding=UTF-8" 
+              username="shop_user" password="shopzzjkz321" schema="nbank" maxActive="200" maxIdle="20" maxWait="10000"/> 
+    <resource-ref>
+        <descrtiption>jdbc/mysqlyctfk</descrtiption>
+        <res-ref-name>jdbc/mysqlyctfk</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+
+	<Resource name="jdbc/ds10" auth="Container" type="javax.sql.DataSource" 
+              driverClassName="com.sybase.jdbc2.jdbc.SybDriver" 
+               factory="org.apache.commons.dbcp.BasicDataSourceFactory"
+			  url="jdbc:sybase:Tds:120.25.214.240:5000/cz_demo?charset=cp936"
+              username="sa" password="" maxActive="20" maxIdle="10" maxWait="3000" minActive="5"/> 
+
+	<resource-ref>
+        <descrtiption>jdbc/ds10</descrtiption>
+        <res-ref-name>jdbc/ds10</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+
+	
+	<Resource name="jdbc/sybase" auth="Container" type="javax.sql.DataSource" 
+              driverClassName="com.sybase.jdbc2.jdbc.SybDriver" 
+               factory="org.apache.commons.dbcp.BasicDataSourceFactory"
+			  url="jdbc:sybase:Tds:120.25.214.240:5000/cz_demo?charset=cp936"
+              username="sa" password="" schema="pos"  maxActive="20" maxIdle="10" maxWait="3000" minActive="5"/> 
+
+
+ <resource-ref>
+        <descrtiption>jdbc/sybase</descrtiption>
+        <res-ref-name>jdbc/sybase</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+
+ <Transaction factory="org.objectweb.jotm.UserTransactionFactory" jotm.timeout="60"/>  
+
+</Context>
+
+
